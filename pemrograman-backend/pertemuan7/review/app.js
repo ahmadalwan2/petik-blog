@@ -64,6 +64,24 @@ app.post("/santri", (req, res) => {
     res.status(201).json({message: "Data berhasil ditambahkan", data})
 })
 
+// app.delete("/santri/:id", (req, res) => {
+//     const id = req.params.id;
+//     const parse = parseInt(id)
+//     data.slice(parse - 1, 1);
+//     res.status(200).json({message: "Data berhasil dihapus", data});
+
+// });
+
+app.delete("/santri/:id", (req, res) => {
+    const id = req.params.id
+    const parse = parseInt(id)
+    if (id > 0 && id <= data.length) {
+        data.splice(parse - 1, 1);
+        res.status(200).json({ message: "Data berhasil dihapus", data });
+    } 
+});
+
+
 app.listen(3000, () => {
     console.log("server berjalan...");
 });
