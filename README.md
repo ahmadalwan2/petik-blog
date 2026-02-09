@@ -1,2 +1,2 @@
-# belajar-npm
-Eksperimen dan praktik membuat server, modul, dan package dengan npm 
+# belajar-deploy menggunakkan vercel
+Eksperimen dan praktik mendeploy menggunakkan vercel
